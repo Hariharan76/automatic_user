@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Add some CSS to style the horizontal navigation menu */
+        header {
+            background-color: #333;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Display the list items horizontally */
+        }
+
+        nav li {
+            margin-right: 20px; /* Add spacing between menu items */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+   
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>                
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <title>User Creation</title>
+    
+    <center><h1>User Creation Form</h1></center>
+    <center><h2> welcome to automatic user creation </h2></center>
+</body>
+
+{% endblock %}
